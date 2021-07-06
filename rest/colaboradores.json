@@ -1,0 +1,36 @@
+{
+    "colaboradores": [
+      {
+        "id": 1,
+        "nombre": "Miguel Mencía Gijón",
+        "email": "mmencia@integrasoftware.com",
+        "rfc": "MMGI100286JSLDRC",
+        "usuario": "@mmencia",
+        "foto": "c2.jpg"
+      },
+      {
+        "id": 2,
+        "nombre": "Juan Meliton Hernandez",
+        "email": "jmeliton@integrasoftware.com",
+        "rfc": "MEHJ830512JSLDRC",
+        "usuario": "@jmeliton",
+        "foto": "c5.jpg"
+      },
+      {
+        "id": 3,
+        "nombre": "Andrea Garcial Perez",
+        "email": "aperez@integrasoftware.com",
+        "rfc": "PEGA800512JSLDRC",
+        "usuario": "@agarcia",
+        "foto": "c1.jpg"
+      },
+      {
+        "id": 4,
+        "nombre": "Patricial Gomez Ortiz",
+        "email": "pgomez@integrasoftware.com",
+        "rfc": "ORGP800512JSLDRC",
+        "usuario": "@pgomez",
+        "foto": "c3.jpg"
+      }
+    ]
+  }

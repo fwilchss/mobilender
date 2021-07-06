@@ -1,0 +1,54 @@
+{
+    "control": [
+      {
+        "id": 1,
+        "usuario": "@mmencia",
+        "fecha": "02/08/20",
+        "archivo" : "clientes_credito.xml",
+        "cambios" : "Se modifico la seccion de creditos"
+      },
+      {
+        "id": 2,
+        "usuario": "@mmencia",
+        "fecha": "04/08/20",
+        "archivo" : "clientes_credito.xml",
+        "cambios" : "Se modificaron los parametros de los creditos"
+      },
+      {
+        "id": 3,
+        "usuario": "@jmeliton",
+        "fecha": "05/08/20",
+        "archivo" : "contrato-cliente.xml",
+        "cambios" : "Se cambiaron datos del contrato "
+      },
+      {
+        "id": 4,
+        "usuario": "@jmeliton",
+        "fecha": "08/08/20",
+        "archivo" : "contrato-cliente.xml",
+        "cambios" : "Se cambiaron datos del contrato "
+      },
+      {
+        "id": 5,
+        "usuario": "@jmeliton",
+        "fecha": "10/08/20",
+        "archivo" : "contrato-cliente.xml",
+        "cambios" : "Se cambiaron datos del contrato "
+      },
+      {
+        "id": 6,
+        "usuario": "@jmeliton",
+        "fecha": "08/08/20",
+        "archivo" : "contrato-cliente.xml",
+        "cambios" : "Se cambiaron datos del contrato "
+      },
+      {
+        "id": 7,
+        "usuario": "@pgomez",
+        "fecha": "10/08/20",
+        "archivo" : "contrato-cliente.xml",
+        "cambios" : "Se cambiaron datos del contrato "
+      }
+    
+    ]
+  }

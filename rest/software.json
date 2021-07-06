@@ -1,0 +1,39 @@
+{
+  "software": [
+    {
+      "id": 1,
+      "name": "Siebel",
+      "credito": "Crédito Grupal"
+    },
+    {
+      "id": 2,
+      "name": "Bantotal",
+      "credito": "Crédito Grupal"
+    },
+    {
+      "id": 3,
+      "name": "Mobilender",
+      "credito": "Crédito Grupal"
+    },
+    {
+      "id": 4,
+      "name": "Alivio",
+      "credito": "Crédito Grupal"
+    },
+    {
+      "id": 5,
+      "name": "Alivio",
+      "credito": "Crédito Grupal"
+    },
+    {
+      "name": "6",
+      "credito": "6",
+      "id": 6
+    },
+    {
+      "name": "el ultimo",
+      "credito": "credito",
+      "id": 7
+    }
+  ]
+}
