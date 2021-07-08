@@ -13,7 +13,7 @@
                 </div>
                 <div class="col-md-6 text-right">
                     <router-link :to="{name: 'inspeccionar'}">
-                        <button class="btn btn-default" v-b-modal.modal-add>
+                        <button class="btn btn-default">
                             <i class="fas fa-search-plus color-v icon-btn"></i> &nbsp;&nbsp; INSPECCIONAR
                         </button>
                     </router-link>
@@ -88,29 +88,25 @@
             }
         },
         created(){
-            
-            this.$http.get('http://localhost:4002/creditos')
-            .then(response => {
-                for(var i = 0; i < response.body.length; i++) {
-                    this.items.push({
-                        archivo:response.body[i].archivo,
-                        expedicion:response.body[i].expedicion,
-                        calidad:response.body[i].calidad,
-                        estatus:response.body[i].estatus,
-                        finalizacion:response.body[i].finalizacion,
-                        usuario:response.body[i].usuario,
-                        acciones: '<i class="fas fa-file-download fa-2x"></i>',
-                        html: '<a href="#/inspeccionar?user='+response.body[i].usuario+'"><i class="fas fa-angle-right fa-2x"></i></router-link>'
-                    })
+            this.$http.get('http://localhost:4002/creditos').then(
+                response => {
+                    for(var i = 0; i < response.body.length; i++) {
+                        this.items.push({
+                            archivo:response.body[i].archivo,
+                            expedicion:response.body[i].expedicion,
+                            calidad:response.body[i].calidad,
+                            estatus:response.body[i].estatus,
+                            finalizacion:response.body[i].finalizacion,
+                            usuario:response.body[i].usuario
+                        })
+                    }
+                }).catch(error => {
+                    console.log(error)
                 }
-
-            }).catch(error => {
-                console.log(error)
-            })
+            )
         }
     }
 </script>
-
 <style>
     .table tr th:last-child div {
         color: #080A12;
@@ -119,5 +115,4 @@
     .table tr td, .table tr th{
         text-align: center;
     }
-
 </style>

@@ -14,7 +14,9 @@
 .color-v.title{
     font-size: 30px;
 }
-
+.bg-info {
+    background-color: #181925 !important;
+}
 .color-v{
     color: #79FAB6;
 }

@@ -10,11 +10,6 @@ export default {
     name: 'Return',
     props: {
         url: String
-    },
-    data() {
-        return {
-
-        }
     }
 }
 </script>

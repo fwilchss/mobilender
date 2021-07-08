@@ -79,7 +79,6 @@
                     }
                 )
             break;
-            
             default:
                 this.items.push({
                     text: 'Home',
@@ -99,5 +98,4 @@
         color: #fff;
         text-decoration: underline;
     }
-
 </style>

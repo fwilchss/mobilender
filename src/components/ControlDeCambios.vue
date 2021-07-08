@@ -74,7 +74,6 @@
 
             this.$http.get('http://localhost:4004/control'+params)
             .then(response => {
-                
                 if(response.body.length > 0 ){
                     for(var i = 0; i < response.body.length; i++) {
                         this.items.push({
@@ -87,12 +86,9 @@
                 }else {
                     this.msn = true;
                 }
-                
-
             }).catch(error => {
                 console.log(error)
             })
-            
         }
     }
 </script>

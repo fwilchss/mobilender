@@ -39,13 +39,11 @@
         },
         methods:{
             logOut(){
-                console.log("cerra sesion");
                 this.$router.push('login');
             }
         }
     }
 </script>
-
 <style>
     #app{
         margin: inherit;
@@ -54,23 +52,27 @@
     div{
         color: #fff;
     }
+
     .c-verde{
         color: #79FAB6;
     }
+    
     .bg-info {
         background-color: #181925 !important;
     }
+    
     .nav-user {
         margin-right: 20px;
         color: #fff !important;
     }
+    
     .circle {
         width: 35px;
         height: 35px;
         background-color: #fff;
         color: #000;
         border-radius: 50%;
-        padding: 7px 5px;
+        padding: 7px 7px;
         font-size: 15px;
     }
 

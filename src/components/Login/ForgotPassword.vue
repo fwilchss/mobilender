@@ -5,13 +5,10 @@
                 <form v-on:submit.prevent="getUser">
                     <h1>Integra <span class="c-verde" >Software</span></h1>
                     <h4 class="text-center">Recuperar cuenta</h4>
-
                     <div class="form-group">
                         <input type="email" class="form-control form-control-lg" v-model="correo" placeholder="Correo electrónico" ref="correo" />
                     </div>
-                    
                     <b-alert :variant="variant" :show="msnSendMail">{{msn}}</b-alert>
-
                     <button type="submit" class="btn btn-dark btn-lg btn-block">Enviar</button>
                     <p class="forgot-password text-right">
                         Regresar a 
@@ -48,9 +45,6 @@
                     this.msn = 'El correo se envío con éxito';
                 }
             }
-        },
-        created(){
-            console.log("entrooo")
         } 
     }
 </script>
@@ -64,5 +58,4 @@
     h1{
         text-align: center;
     }
-   
 </style>

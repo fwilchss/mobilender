@@ -22,7 +22,6 @@
                     <hr/>
                 </div>
             </div>
-            
             <div class="row form-group">
                 <div class="col-md-12">
                     <div class="cont-table">
@@ -41,7 +40,6 @@
                 </div>
             </div>
         </div>
-
         <b-modal id="modal-add" title="Agregar Software">
             <form v-on:submit.prevent="setSoftware">
                 <div class="form-group">
@@ -59,7 +57,6 @@
             </form>
         </b-modal>
     </div>
-    
 </template>
 <script>
     import Navbar from '@/components/Static/Navbar';
@@ -86,13 +83,12 @@
             .then(response => {
                 for(var i = 0; i < response.body.length; i++) {
                     this.items.push({
-                        id:"<div class='id-cont'>"+(response.body[i].id.length== 2?response.body[i].id:"0"+response.body[i].id)+"</div>",
+                        id:"<div class='id-cont'>"+(response.body[i].id.length == 2?response.body[i].id:"0"+response.body[i].id)+"</div>",
                         name:"<span class='name-sf'>"+response.body[i].name+"</span>",
                         credito:response.body[i].credito,
                         html: '<i class="fas fa-angle-right fa-2x"></i>'
                     })
                 }
-
             }).catch(error => {
                 console.log(error)
             })
@@ -151,7 +147,7 @@
                 })
             },
             listadoDeSoftware(){
-                this.items =[];
+                this.items = [];
                 this.$http.get('http://localhost:4001/software')
                 .then(response => {
                     for(var i = 0; i < response.body.length; i++) {
@@ -162,7 +158,6 @@
                             html: '<i class="fas fa-angle-right fa-2x"></i>'
                         })
                     }
-
                 }).catch(error => {
                     console.log(error)
                 })
@@ -181,12 +176,11 @@
     }
 
     .modal-footer{
-        display: none;
+        display: none !important;
     }
 
     .name-sf {
         font-weight: bold;
         font-size: 30px;
     }
-
 </style>

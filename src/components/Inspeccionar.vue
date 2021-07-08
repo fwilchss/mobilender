@@ -56,13 +56,12 @@
     </div>
 </template>
 <script>
-
     import Navbar from '@/components/Static/Navbar';
     import Breadcrumb from '@/components/Static/Breadcrumb';
     import Return from '@/components/Static/Return';
 
     export default {
-        name:'control-de-cambios',
+        name:'Inspeccionar',
         components: {
             Navbar,
             Breadcrumb,
@@ -78,12 +77,11 @@
         created(){
             var uri = this.$route.params;
             this.buscar = uri.user;
-            var params = '';
+            let params = '';
 
             if(uri.user != undefined)
                 params = '?q='+uri.user;
             
-
             this.$http.get('http://localhost:4003/colaboradores'+params)
             .then(response => {
                 this.encontrados = "("+response.body.length+" encontrados)";
@@ -99,7 +97,6 @@
             }).catch(error => {
                 console.log(error)
             })
-            
         }, methods:{
            getImgUrl(pet) {
                 var images = require.context('../assets/img/', false, /\.jpg$/)
@@ -119,7 +116,6 @@
                             usuario:response.body[i].usuario
                         })
                     }
-
                 }).catch(error => {
                     console.log(error)
                 })
@@ -144,10 +140,8 @@
                 })
             }
         }
-
     }
 </script>
-
 <style>
     #control-de-cambios .input-group-text {
         color: #fff;

@@ -5,26 +5,20 @@
                 <form v-on:submit.prevent="setUser">
                     <h1>Integra <span class="c-verde" >Software</span></h1>
                     <h4 class="text-center">Registro nuevo</h4>
-
                     <div class="form-group">
                         <label>Nombre completo</label>
                         <input type="text" class="form-control form-control-lg" v-model="nombre" ref="nombre" />
                     </div>
-
                     <div class="form-group">
                         <label>Correo electrónico</label>
                         <input type="email" class="form-control form-control-lg" v-model="correo" ref="correo"/>
                     </div>
-
                     <div class="form-group">
                         <label>Contraseña</label>
                         <input type="password" class="form-control form-control-lg" v-model="password" ref="password"/>
                     </div>
-                    
-                    <b-alert :variant="variant" :show="msnErrorSet">{{msn}}</b-alert>
-
+                    <b-alert name="msnErrorSet" :variant="variant" :show="msnErrorSet">{{msn}}</b-alert>
                     <button type="submit" class="btn btn-dark btn-lg btn-block">Registrate</button>
-
                     <p class="forgot-password text-right">
                         Ya estoy registrado 
                         <router-link :to="{name: 'login'}">Iniciar sesión</router-link>
@@ -34,7 +28,6 @@
         </div>
     </div>
 </template>
-
 <script>
     export default {
         name: 'Signup',
@@ -53,9 +46,7 @@
                 var fullName = this.nombre;
                 var email = this.correo;
                 var password = this.password;
-                
                 var url = "http://localhost:4000/usuarios";
-
                 var myObj = {
                     "email":email,
                     "password":password,
@@ -105,7 +96,7 @@
                         this.msn = 'El registro se creo con éxito';
                         this.variant = 'success';
                         setTimeout(() => {
-                            this.$router.push('login');
+                            this.$router.push({name:'login', params:{'email':email, 'password':password}});
                         }, 3000);
                     } else {
                         this.msnErrorSet = true;
@@ -116,9 +107,6 @@
                     console.log(error)
                 })
             }
-        },
-        created(){
-            console.log("entrooo")
         } 
     }
 </script>
